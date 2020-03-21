@@ -33,10 +33,9 @@ var billete = new Billete(50,5);
 var res = document.getElementById("resultado");
 
 for(var i = 0; i < 3; i++){ 
-	var nuevoBillete = billete.mostrar();		
-	console.log("veces que se ejecuta 'res.appendChild' + 'res.innerHTML': ",i);
+	var nuevoBillete = billete.mostrar();
+		console.log("veces que se ejecuta 'res.appendChild': ",i);
 	res.appendChild(nuevoBillete);
-	res.innerHTML += " "; // <<<< porqué es necesario in innerHTML para que se repitan los billetes??????
 }
 	</script>
 </body>
