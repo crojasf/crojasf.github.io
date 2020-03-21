@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>	
+	<title>Document</title>
+</head>
+<body>
+	<div id="resultado"></div>
+	
+<script >
+
+class Billete
+{
+	// atributos
+	constructor (valor, cantidad)
+	{
+		//this.imagen = new Image();
+		this.imagen = document.createElement('img');
+		this.valor = valor;
+		this.cantidad = cantidad;
+		this.imagen.src = "EUR_" + this.valor + ".jpg";
+		this.imagen.height = 80;
+	}
+
+	// metodos
+	mostrar()
+	{
+		return this.imagen;
+	}
+}
+
+var billete = new Billete(50,5);
+
+var res = document.getElementById("resultado");
+
+for(var i = 0; i < 3; i++){ 
+	var nuevoBillete = billete.mostrar();		
+	console.log("veces que se ejecuta 'res.appendChild' + 'res.innerHTML': ",i);
+	res.appendChild(nuevoBillete);
+	res.innerHTML += " "; // <<<< porqué es necesario in innerHTML para que se repitan los billetes??????
+}
+	</script>
+</body>
+</html>
